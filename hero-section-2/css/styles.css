@@ -1,0 +1,225 @@
+
+								
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+:is(h1, h4, p) {
+    margin: 0;
+}
+
+/* Navigation */
+.hero-bg {
+    background-image: url(./bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.nav {
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+nav a {
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #98ec65;
+}
+
+.logo {
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.logo h1 {
+    color: #fff;
+}
+
+.logo span {
+    color: #98ec65;
+}
+
+nav ul {
+    gap: 3em;
+    font-size: 17px;
+}
+
+.nav-btn {
+    border: 2px solid #98ec65;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.nav-btn:hover {
+    background-color: #98ec65;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    max-width: 500px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8em 0;
+}
+
+.hero h1 {
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: 700;
+    color: #98ec65;
+    font-size: clamp(4rem, 5vw, 2rem);
+    padding-bottom: 0.5em;
+}
+
+.hero p {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.btns {
+    align-items: center;
+    gap: 2em;
+    padding: 2em 0;
+}
+
+.btns a {
+    color: #98ec65;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+
+.btn {
+    padding: 0.7em 1em;
+    text-align: center;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.btn:nth-of-type(2) {
+    padding: 1.35em 1em;
+}
+
+.btn:hover {
+    background-color: #98ec65;
+    color: #fff;
+}
+
+/* End Hero Section */
+
+/* Media */
+
+@media screen and (max-width:750px) {
+    .toggleMenu {
+        position: absolute;
+        right: 15px;
+        background-image: url(./openNav.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        padding: 2em;
+        z-index: 1000;
+    }
+
+    .toggleMenu.active {
+        position: fixed;
+        background-size: 25px;
+    }
+
+    .navigation {
+        justify-content: center;
+        align-items: center;
+        transform: scale(1, 0);
+        -webkit-transform: scale(1, 0);
+        -moz-transform: scale(1, 0);
+        -ms-transform: scale(1, 0);
+        -o-transform: scale(1, 0);
+        transform-origin: top;
+        max-height: 0;
+        opacity: 0;
+    }
+
+    .navigation.active {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        max-height: 100%;
+        opacity: 1;
+        z-index: 999;
+        background-color: #98ec65;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-bg {
+        height: 100%;
+    }
+
+    .btns {
+        flex-wrap: wrap;
+    }
+
+}							
